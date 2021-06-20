@@ -1,0 +1,949 @@
+
+		<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <h2>Registro de Locadores</h2>    
+		<table border="1">
+            <thead>
+              <tr style="background-color:#297EDE;"style="color:#E6EFF9"; >
+                 
+                 <th>Nro Empleado</th>
+                 <th>RUC/DNI</th>
+                 <th>Nombres y apellidos</th>
+                 
+                 
+                 
+               </tr>
+            </thead>
+            <tbody>
+                           <tr>
+                
+                <td>0001</td>
+                <td>10473503927</td>
+                <td>DENNIS MAXWELL  MEDINA BARRETO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0002</td>
+                <td>10417380197</td>
+                <td>RONALD NOEL CORONEL  DIAZ </td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0003</td>
+                <td>10011520851</td>
+                <td>LUIS FERNANDO OXOLON ZUTA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0004</td>
+                <td>10010461532</td>
+                <td>JOVITA BUSTAMANTE HERNANDEZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0005</td>
+                <td>10725656527</td>
+                <td>WINY MARICIELO REGALADO SALAZAR </td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0006</td>
+                <td>10458943091</td>
+                <td>RICHARD ANDY HERNANDEZ  RODRIGUEZ </td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0007</td>
+                <td>10704277488</td>
+                <td>JULINHIO HARLEY RODRIGUEZ PEREZ </td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0008</td>
+                <td>10415268764</td>
+                <td>MILAGROS MENDOZA CHAVEZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0009</td>
+                <td>10803426711</td>
+                <td>GRICERIO CARRASCO VASQUEZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0010</td>
+                <td>10275690991</td>
+                <td>FLOR MARINA CARUAJULCA CARUAJULCA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0011</td>
+                <td>10432332255</td>
+                <td>MARIA ETELVINA LLANOS URIARTE</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0012</td>
+                <td>10010462849</td>
+                <td> ARASELY PUELLES HERNANDEZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0013</td>
+                <td>10010454471</td>
+                <td>NORMA DIAZ MESIA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0014</td>
+                <td>10459986982</td>
+                <td>MARUJA RAMIREZ CHILCON</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0015</td>
+                <td>10471938799</td>
+                <td>NIXON OMAR FERNANDEZ CARRION</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0016</td>
+                <td>10757796967</td>
+                <td>MIGUEL ANGEL MARTINEZ GOICOCHEA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0017</td>
+                <td>10181539602</td>
+                <td>GUSTAVO TRIGOZO VILLACORTA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0018</td>
+                <td>10431461876</td>
+                <td>JANETH SANDOVAL ROBALINO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0019</td>
+                <td>10706910072</td>
+                <td>LUIS ANDRE PEREZ TANGOA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0020</td>
+                <td>10441978192</td>
+                <td>DANIEL CARRASCO CARRANZA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0021</td>
+                <td>10743089478</td>
+                <td>LEISDY SANCHEZ JUEP</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0022</td>
+                <td>10467437742</td>
+                <td>EMANUEL NIEVES REVILLA VASQUEZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0023</td>
+                <td>10008239539</td>
+                <td>DIOMEDES LOPEZ CASTRO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0024</td>
+                <td>10010530089</td>
+                <td>DANIEL COLLANTES ALEJANDRIA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0025</td>
+                <td>10479267541</td>
+                <td>MARIA JHOVANY PEREZ VALLEJOS</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0026</td>
+                <td>10482371863</td>
+                <td> JHONATAN HUAMALCA TANTAHUATAY</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0027</td>
+                <td>10481759221</td>
+                <td>EDWAR PRAXIDO BAZAN MENDEZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0028</td>
+                <td>10407926299</td>
+                <td>JIMMY PACHERREZ RIVA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0029</td>
+                <td>10459843120</td>
+                <td>JUAN RIVAS ISLA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0030</td>
+                <td>10470810209</td>
+                <td>JOSUE VILLACORTA TORREJON</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0031</td>
+                <td>10010473956</td>
+                <td>WALTER TANTAHUATAY GONZALEZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0032</td>
+                <td>10476249754</td>
+                <td> KELLY MARIA GUERRA ALMERCO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0033</td>
+                <td>10712286721</td>
+                <td>CARLOS CABRERA ARISTA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0034</td>
+                <td>10475196983</td>
+                <td>ROXANA GOICOCHEA MONTENEGRO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0035</td>
+                <td>10406868309</td>
+                <td>EDGAR EDUARDO SAAVEDRA LOPEZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0036</td>
+                <td>10461415321</td>
+                <td>MARIA DORCAS SANTA CRUZ VALDERRAMA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0037</td>
+                <td>10407822141</td>
+                <td>ELIZABETH GUEVARA RUBIO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0038</td>
+                <td>10408918532</td>
+                <td>ELVIS PERCY VELA HIDALGO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0039</td>
+                <td>10725657931</td>
+                <td>WENDY THAMARA LOPEZ MORI</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0040</td>
+                <td>10463096380</td>
+                <td>BRANLY VICENTE MEDINA CAMPOS</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0041</td>
+                <td>10409291720</td>
+                <td>PERCY QUILICHE ALVA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0042</td>
+                <td>10438685885</td>
+                <td> GINA TANTALEAN BOCANEGRA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0043</td>
+                <td>10010340778</td>
+                <td>RUDDY GHANDI BARRETO RIVADENEIRA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0044</td>
+                <td>10462152804</td>
+                <td>ESTHER KHEILY HUAMAN SORIANO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0045</td>
+                <td>10414889781</td>
+                <td>MARIA ELENA GUILLENA DIAZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0046</td>
+                <td>10746345815</td>
+                <td>LISBETHE HELLEN DAVILA FLORES</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0047</td>
+                <td>10715941819</td>
+                <td>JESSICA MARIA MORALES PEZO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0048</td>
+                <td>10708152787</td>
+                <td>AMERICA LISBETH TORRES ZULUETA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0049</td>
+                <td>10704545067</td>
+                <td>REYSER MAS MELENDEZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0050</td>
+                <td>10704626351</td>
+                <td>NILSSON MIRANDA LOPEZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0051</td>
+                <td>10423506631</td>
+                <td>JULIO GARCIA BARDALES</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0052</td>
+                <td>10756736154</td>
+                <td>MARISOL RAMIREZ TARRILLO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0053</td>
+                <td>10075294366</td>
+                <td>AUGUSTO MACEDO NAVARRO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0054</td>
+                <td>10417083958</td>
+                <td>CLARA ROSA MENDOZA GUERRERO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0055</td>
+                <td>10011480409</td>
+                <td>ELIZABETH LUCANA PINTADO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0056</td>
+                <td>10010204017</td>
+                <td>JOEL TEODORO MORI  DIAZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0057</td>
+                <td>10460618733</td>
+                <td>PATRICIA DEL PILAR LOPEZ BOCANEGRA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0058</td>
+                <td>10465828094</td>
+                <td>WILDER JHON GOICOCHEA COLUNCHE</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0059</td>
+                <td>10718527665</td>
+                <td>ALICIA CUBAS PEREZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0060</td>
+                <td>10008604059</td>
+                <td>CLEMENTE LABAJOS REATEGUI</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0061</td>
+                <td>10469977353</td>
+                <td>KEN DANY POQUIZ BOCANEGRA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0062</td>
+                <td>10724265192</td>
+                <td>MARITZA AREVALO TANTAHUATAY</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0063</td>
+                <td>10452337423</td>
+                <td>ERLIT YESSY JAPA GONZALES</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0064</td>
+                <td>10745308835</td>
+                <td> DARWIN INFANTE QUIROZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0065</td>
+                <td>10002096906</td>
+                <td>ELISEO LOPEZ MEDINA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0066</td>
+                <td>10717244970</td>
+                <td>JANINA ANGELITA VASQUEZ VELASQUEZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0067</td>
+                <td>10460491598</td>
+                <td>JUANITA FIGUEROA RIVERA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0068</td>
+                <td>10435892782</td>
+                <td>ROSA MAGALI INFANTE BURGOS</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0069</td>
+                <td>10010273680</td>
+                <td>JOEL ROJAS OCMIN</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0070</td>
+                <td>10010473182</td>
+                <td>HENNRY PEREZ PEREZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0071</td>
+                <td>10010462334</td>
+                <td>WALTER RODRIGUEZ ASPAJO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0072</td>
+                <td>10432875321</td>
+                <td>EDUARDO MAGNO ROJAS ROJAS</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0073</td>
+                <td>10009510341</td>
+                <td> REYES DEL AGUILA PANDURO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0074</td>
+                <td>10010462334</td>
+                <td>WALTER RODRIGUEZ ASPAJO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0075</td>
+                <td>10446341354</td>
+                <td>JUAN ISIDRO  DEL AGUILA CHOTA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0076</td>
+                <td>10099619517</td>
+                <td>MESIAS CLODOMIRO CAMPOS ALTAMIRANO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0077</td>
+                <td>10010204645</td>
+                <td>CARLOS SEGUNDO RODRIGUEZ NOVOA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0078</td>
+                <td>10464262551</td>
+                <td>SALVADOR ISIDRO SILVA GOICOCHEA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0079</td>
+                <td>10078232779</td>
+                <td>NICACIO CHAVEZ LOPEZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0080</td>
+                <td>10400760671</td>
+                <td>ELIZABETH GARCIA ZAGACETA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0081</td>
+                <td>10706142857</td>
+                <td>JHORDY BOCANEGRA LOPEZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0082</td>
+                <td>10010224034</td>
+                <td>GEINER RENGIFO GOMEZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0083</td>
+                <td>10772167721</td>
+                <td>LUIS MAGUIN SUAREZ  CRESPIN </td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0084</td>
+                <td>10011741776</td>
+                <td>KELLY VARGAS TAFUR</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0085</td>
+                <td>10433362930</td>
+                <td>HENRY MESIA TELLO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0086</td>
+                <td>10421246446</td>
+                <td> JUAN CARLOS ASPAJO PORTOCARRERO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0087</td>
+                <td>10436117961</td>
+                <td>VICTOR MANUEL ANGELES VILAS</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0088</td>
+                <td>10449169196</td>
+                <td>MAGALY PISCO TORRES</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0089</td>
+                <td>10720735275</td>
+                <td>LEANDRO DAVILA CORONEL</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0090</td>
+                <td>10716899336</td>
+                <td> HEIDY CHAVEZ RODRIGUEZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0091</td>
+                <td>10723810499</td>
+                <td>LUIS FERNANDO ROBLES LAVI</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0092</td>
+                <td>10462054896</td>
+                <td>CESAR ANTONIO HONORES DIAZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0093</td>
+                <td>10424697392</td>
+                <td>ELIAS CRUZ PORTOCARRERO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0094</td>
+                <td>10721890037</td>
+                <td>JOHN ANDERSON DIAZ LIMAY</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0095</td>
+                <td>10414444623</td>
+                <td>NORY MEYLIN CHONG LOPEZ</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0096</td>
+                <td>10711176557</td>
+                <td>ROSITA JHOSELY HERRERA BECERRA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0097</td>
+                <td>10403388985</td>
+                <td> ETHEL SANDOVAL PADILLA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0098</td>
+                <td>10757029800</td>
+                <td>LEYDI IDROGO VALLEJOS</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0099</td>
+                <td>10000935234</td>
+                <td>JORGE LUIS ARBILDO COTRINA</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0100</td>
+                <td>10469036907</td>
+                <td>VICTORIA DOMINGUEZ GUERRERO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0101</td>
+                <td>10706522561</td>
+                <td>CLAUDIA ARLEHT VARGAS FLORES</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0102</td>
+                <td>10740651477</td>
+                <td>KAREN JUDITH PISCO HIDALGO</td>
+              
+               
+                
+               </tr>
+                         <tr>
+                
+                <td>0103</td>
+                <td>10766105608</td>
+                <td>JOSE ALEXANDER CRUZ CUSMA</td>
+              
+               
+                
+               </tr>
+                       </tbody>
+        </table> 
+
+ 

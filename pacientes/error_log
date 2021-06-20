@@ -1,0 +1,8 @@
+[25-Sep-2020 12:16:21 America/Lima] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/s4rang/defunciones.s4rang.com/docs/class/sentencias.php on line 47
+[06-Oct-2020 20:39:35 America/Lima] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/s4rang/defunciones.s4rang.com/docs/class/sentencias.php on line 47
+[15-Oct-2020 12:36:52 America/Lima] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/s4rang/defunciones.s4rang.com/docs/class/sentencias.php on line 47
+[15-Oct-2020 12:36:57 America/Lima] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/s4rang/defunciones.s4rang.com/docs/class/sentencias.php on line 47
+[24-Oct-2020 22:04:20 America/Lima] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/s4rang/defunciones.s4rang.com/docs/class/sentencias.php on line 47
+[09-Nov-2020 15:32:59 America/Lima] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/s4rang/defunciones.s4rang.com/docs/class/sentencias.php on line 47
+[09-Nov-2020 15:35:53 America/Lima] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/s4rang/defunciones.s4rang.com/docs/class/sentencias.php on line 47
+[09-Nov-2020 15:35:56 America/Lima] PHP Warning:  mysqli_num_rows() expects parameter 1 to be mysqli_result, boolean given in /home/s4rang/defunciones.s4rang.com/docs/class/sentencias.php on line 47

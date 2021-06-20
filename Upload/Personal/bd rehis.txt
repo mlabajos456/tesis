@@ -1,0 +1,3 @@
+BD nombre: s4rang_rehis
+usuario: s4rang_rehis
+contraseña: rehis2020Moyobamba

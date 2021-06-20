@@ -1,0 +1,25 @@
+
+<IfModule mod_rewrite.c>
+Options +FollowSymLinks
+RewriteEngine on
+
+RewriteCond %{REQUEST_URI} !\.(?:css|js|jpe?g|gif|png)$ [NC]
+
+RewriteCond %{REQUEST_URI} !css$
+RewriteCond %{REQUEST_URI} !js$
+RewriteCond %{REQUEST_URI} !php$
+RewriteCond %{SCRIPT_FILENAME} !-d
+RewriteCond %{SCRIPT_FILENAME} !-f
+RewriteCond %{SCRIPT_FILENAME} !-l
+RewriteRule ^empleados/documentos-(.+)$ empleados/documentos.php?id_empleado=$1 [NC,L]
+RewriteRule ^login$ login.php [NC,L]
+RewriteRule ^index$ index.php [NC,L]
+RewriteRule ^dato_laboral/nuevo$ dato_laboral/nuevo.php [NC,L]
+RewriteRule ^reportes/lista_empleado$ reportes/lista_empleado [NC,L]
+RewriteRule ^dato_laboral/modificar-(.+)$ dato_laboral/modificar.php?id=$1 [NC,L]
+RewriteRule ^reportes/lista_dato_laboral-(.+)-(.+)-(.+)-(.+)-(.+)$ reportes/lista_dato_laboral.php?id_regimen_laboral=$1&id_categoria_ocupacional=$2&id_condicion_laboral=$3&id_meta=$4&id_periodo=$5 [NC,L]
+
+
+
+</IfModule>
+	

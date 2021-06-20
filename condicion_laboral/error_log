@@ -1,0 +1,5 @@
+[25-Sep-2020 11:44:24 America/Lima] PHP Warning:  include_once(../docs/class/valida_permiso.php): failed to open stream: No such file or directory in /home/s4rang/defunciones.s4rang.com/condicion_laboral/index.php on line 10
+[25-Sep-2020 11:44:24 America/Lima] PHP Warning:  include_once(): Failed opening '../docs/class/valida_permiso.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/s4rang/defunciones.s4rang.com/condicion_laboral/index.php on line 10
+[25-Sep-2020 11:44:38 America/Lima] PHP Warning:  include_once(../docs/class/valida_permiso.php): failed to open stream: No such file or directory in /home/s4rang/defunciones.s4rang.com/condicion_laboral/index.php on line 10
+[25-Sep-2020 11:44:38 America/Lima] PHP Warning:  include_once(): Failed opening '../docs/class/valida_permiso.php' for inclusion (include_path='.:/opt/cpanel/ea-php56/root/usr/share/pear') in /home/s4rang/defunciones.s4rang.com/condicion_laboral/index.php on line 10
+[25-Sep-2020 11:44:39 America/Lima] PHP Fatal error:  Call to undefined function pg_fetch_array() in /home/s4rang/defunciones.s4rang.com/condicion_laboral/lista.php on line 28
