@@ -3,7 +3,6 @@ $raiz = "../../docs/";
 require($raiz . "class/sentencias.php");
 $sql = new sentencias();
 
-$id_covid = ($_POST['id_covid']);
 $id_paciente = ($_POST['id_paciente']);
 $fiebre = ($_POST['fiebre']);
 $tos = ($_POST['tos']);
@@ -101,7 +100,7 @@ $sql->consulta("INSERT into t_covid (
     '$id_tipo_prueba',
     '$fecha_registro')");
 if ($sql->error()) {
-    $respuesta = array('error');
+    $respuesta = array($sql->error());
     echo json_encode($respuesta);
 } else {
     $respuesta = array('okay');

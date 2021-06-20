@@ -19,7 +19,17 @@ if ($val > 0) {
     $respuesta = array('duplicidad');
     echo json_encode($respuesta);
 } else {
-    $sql->consulta("INSERT into t_paciente (apellido_paterno,apellido_materno,nombre,fecha_nac,estado_civil,sexo,domicilio,telefono,dni,id_est_salud) 
+    $sql->consulta("INSERT into t_paciente (
+    apellido_paterno,
+    apellido_materno,
+    nombre,
+    fecha_nac,
+    estado_civil,
+    sexo,
+    domicilio,
+    telefono,
+    dni,
+    id_est_salud) 
     values(
     '$apellido_paterno',
     '$apellido_materno',
@@ -32,7 +42,7 @@ if ($val > 0) {
     '$dni',
     '999')");
     if ($sql->error()) {
-        $respuesta = array('error');
+        $respuesta = array($sql->error());
         echo json_encode($respuesta);
     } else {
         $respuesta = array('okay');

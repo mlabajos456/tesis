@@ -5,15 +5,15 @@ $sql = new sentencias();
 
 
 $id_persona = $_POST['id_persona'];
-$dni = utf8_decode($_POST['dni']);
-$apellido_paterno = utf8_decode($_POST['apellido_paterno']);
-$apellido_materno = utf8_decode($_POST['apellido_materno']);
-$nombre = utf8_decode($_POST['nombre']);
-$fecha_nac = utf8_decode($_POST['fecha_nac']);
-$estado_civil = utf8_decode($_POST['estado_civil']);
-$sexo = utf8_decode($_POST['sexo']);
-$domicilio = utf8_decode($_POST['domicilio']);
-$telefono = utf8_decode($_POST['telefono']);
+$dni = ($_POST['dni']);
+$apellido_paterno = ($_POST['apellido_paterno']);
+$apellido_materno = ($_POST['apellido_materno']);
+$nombre = ($_POST['nombre']);
+$fecha_nac = ($_POST['fecha_nac']);
+$estado_civil = ($_POST['estado_civil']);
+$sexo = ($_POST['sexo']);
+$domicilio = ($_POST['domicilio']);
+$telefono = ($_POST['telefono']);
 $respuesta = array();
 $sql->consulta("UPDATE t_paciente 
     set 
@@ -28,7 +28,7 @@ $sql->consulta("UPDATE t_paciente
    dni = '$dni'
    where id_persona='$id_persona'");
 if ($sql->error()) {
-    $respuesta = array('error');
+    $respuesta = array($sql->error());
     echo json_encode($respuesta);
 } else {
     $respuesta = array('okay');

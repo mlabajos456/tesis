@@ -88,7 +88,7 @@ $sql->consulta("INSERT into t_dengue (
     '$id_registrador',
     '$fecha_registro')");
 if ($sql->error()) {
-    $respuesta = array('error');
+    $respuesta = array($sql->error());
     echo json_encode($respuesta);
 } else {
     $respuesta = array('okay');

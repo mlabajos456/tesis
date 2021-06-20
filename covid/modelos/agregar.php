@@ -1,134 +1,195 @@
-<?php
-   $raiz = "../../docs/";
-   require($raiz."class/sentencias.php");
-   $sql = new sentencias();
-
-    $id_ogess=$_POST['id_ogess'];
-    $id_red=$_POST['id_red'];
-    $id_mred=$_POST['id_mred'];
-    $id_establecimiento=$_POST['id_establecimiento'];
-    $id_tipo_documento=$_POST['id_tipo_documento'];
-    $dni=$_POST['dni'];
-    $id_sexo=$_POST['id_sexo'];
-    $fecha_nac=$_POST['fecha_nac'];
-    $apell_paterno=$_POST['apell_paterno'];
-    $apell_materno=$_POST['apell_materno'];
-    $nombre=$_POST['nombre'];
-    $tipo_regimen=$_POST['tipo_regimen'];
-    $tipo_seguro=$_POST['tipo_seguro'];
-    $lugar_fallecimiento=$_POST['lugar_fallecimiento'];
-    $dir_falle=$_POST['dir_falle'];
-    $fec_ing_ipress=$_POST['fec_ing_ipress'];
-    $tipo_diag=$_POST['tipo_diag'];
-    $profesional=$_POST['profesional'];
-    $nom_apell_per=$_POST['nom_apell_per'];
-    $cod_coleg=$_POST['cod_coleg'];
-    $cie_basic=$_POST['cie_basic'];
-    $cie_d_basic=$_POST['cie_d_basic'];
-    $cie_basic_f=$_POST['cie_basic_f'];
-    $cie_d_basic_f=$_POST['cie_d_basic_f'];
-    $fec_falle=$_POST['fec_falle'];
-    $manejo_falle=$_POST['manejo_falle'];
-    $fec_crema=$_POST['fec_crema'];
-    $orden_cremacion=$_POST['orden_cremacion'];
-    $empresa_cre=$_POST['empresa_cre'];
-    $id_departamento=$_POST['id_departamento'];
-    $id_provincia=$_POST['id_provincia'];
-    $id_distrito=$_POST['id_distrito'];
-    $costo_serv=$_POST['costo_serv'];
-    $observaciones=$_POST['observaciones'];
-   
-    $fecha = date("Y-m-d H:i:s");
-   
-    $nombre_imagen=$_FILES['imagen']['name'];
-    $tipo_imagen=$_FILES['imagen']['type'];
-    $tamano_imagen=$_FILES['imagen']['size'];
-    $tmp_name=$_FILES['imagen']['tmp_name'];
-
-    $destino=$_SERVER['DOCUMENT_ROOT'].'/defunciones/Upload/Personal/';
-    move_uploaded_file($tmp_name,$destino.$nombre_imagen);
-
-    if($nombre_imagen!=""){
-      $archivo=$nombre_imagen;
-    }else{
-      $archivo="default.png";
-    }
-
-     $sql->consulta("INSERT into t_fallecidos (id_establecimiento
-      ,dni
-      ,id_sexo
-      ,fecha_nac
-      ,apell_paterno
-      ,apell_materno
-      ,nombre
-      ,tipo_regimen
-      ,tipo_seguro
-      ,lugar_fallecimiento
-      ,dir_falle
-      ,fec_ing_ipress
-      ,tipo_diag
-      ,profesional
-      ,nom_apell_per
-      ,cod_coleg
-      ,cie_basic
-      ,cie_d_basic
-      ,cie_basic_f
-      ,cie_d_basic_f
-      ,fec_falle
-      ,manejo_falle
-      ,fec_crema
-      ,orden_cremacion
-      ,empresa_cre
-      ,id_distrito
-      ,costo_serv
-      ,observaciones
-      ,archivo) 
-    values('$id_establecimiento','$dni','$id_sexo','$fecha_nac','$apell_paterno','$apell_materno','$nombre','$tipo_regimen','$tipo_seguro','$lugar_fallecimiento','$dir_falle','$fec_ing_ipress','$tipo_diag','$profesional','$nom_apell_per','$cod_coleg','$cie_basic','$cie_d_basic','$cie_basic_f','$cie_d_basic_f','$fec_falle','$manejo_falle','$fec_crema','$orden_cremacion','$empresa_cre','$id_distrito','$costo_serv','$observaciones','$archivo')");
-
-       if ($sql->error()){
-      ?>
-      <div class="alert alert-danger" role="alert">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>Error al insertar registro!</strong>
-            
-      </div>
-        
-      <?php
-      }
-      else{
-      
-        ?>
-      <div class="alert alert-success" role="alert">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>¡el registro de insertó correctamente!</strong>
-            
-      </div>
-      <?php
-
-      }
-          
-        ?>
-<?php 
-   /*
-      $sql->consulta("INSERT into t_articulo (titulo,imagen,resumen,id_autor,link_youtube,enlace,fecha,estado,id_categoria) 
-    values('$titulo','$img_articulo','$resumen','$id_autor','$link_youtube','$enlace','$fecha','$estado','$id_categoria')");
-
-       if ($sql->error()){
-      ?>
-      <div class="alert alert-danger" role="alert">
-            <button type="button" class="close" data-dismiss="alert">&times;</button>
-            <strong>Error al insertar registro!</strong>
-            
-        </div>
-        
-      <?php
-      }
-      else{
-      
-       $linea=$sql->consulta("SELECT MAX(id_articulo) from t_articulo" );
-       while($r = $sql->fetch_array($linea)){$respuesta=$r[0];}
-       echo $respuesta;
-
-      }
-     */     
-        ?>
+<?php
+
+$raiz = "../../docs/";
+
+require($raiz . "class/sentencias.php");
+$sql = new sentencias();
+
+$id_paciente = ($_POST['id_paciente']);
+$fiebre = ($_POST['fiebre']);
+$tos = ($_POST['tos']);
+$dolor_garganta = ($_POST['dolor_garganta']);
+$respiratorio = ($_POST['respiratorio']);
+$congestion_nasal = ($_POST['congestion_nasal']);
+$fecha_ini_sin = ($_POST['fecha_ini_sin']);
+$contacto_persona = ($_POST['contacto_persona']);
+$out_country = ($_POST['out_country']);
+$id_country = ($_POST['id_country']);
+$work_ipress = ($_POST['work_ipress']);
+$obesidad = ($_POST['obesidad']);
+$diabetes = ($_POST['diabetes']);
+$inmunosupresor = ($_POST['inmunosupresor']);
+$gestante = ($_POST['gestante']);
+$asma = ($_POST['asma']);
+$enfermedad_pulmonar_cro = ($_POST['enfermedad_pulmonar_cro']);
+$hipertension = ($_POST['hipertension']);
+$cancer = ($_POST['cancer']);
+$enfer_cardiovascular = ($_POST['enfer_cardiovascular']);
+$renal_cro = ($_POST['renal_cro']);
+$adulto_mayor = ($_POST['adulto_mayor']);
+$niño = ($_POST['niño']);
+$fam_enfer_cron = ($_POST['fam_enfer_cron']);
+$cant_pers = ($_POST['cant_pers']);
+$latitud = ($_POST['latitud']);
+$longitud = ($_POST['longitud']);
+$prueba_rapida = ($_POST['prueba_rapida']);
+$id_registrador = ($_POST['id_registrador']);
+$id_tipo_prueba = ($_POST['id_tipo_prueba']);
+$fecha_registro = ($_POST['fecha_registro']);
+
+$sql->consulta("INSERT into t_covid (
+    id_paciente,
+    fiebre,
+    tos,
+    dolor_garganta,
+    respiratorio,
+    congestion_nasal,
+    fecha_ini_sin,
+    contacto_persona,
+    out_country,
+    id_country,
+    work_ipress,
+    obesidad,
+    diabetes,
+    inmunosupresor,
+    gestante,
+    asma,
+    enfermedad_pulmonar_cro,
+    hipertension,
+    cancer,
+    enfer_cardiovascular,
+    renal_cro,
+    adulto_mayor,
+    niño,
+    fam_enfer_cron,
+    cant_pers,
+    latitud,
+    longitud,
+    prueba_rapida,
+    id_registrador,
+    id_tipo_prueba,
+    fecha_registro) 
+    values(
+    '$id_paciente',
+    '$fiebre',
+    '$tos',
+    '$dolor_garganta',
+    '$respiratorio',
+    '$congestion_nasal',
+    '$fecha_ini_sin',
+    '$contacto_persona',
+    '$out_country',
+    '$id_country',
+    '$work_ipress',
+    '$obesidad',
+    '$diabetes',
+    '$inmunosupresor',
+    '$gestante',
+    '$asma',
+    '$enfermedad_pulmonar_cro',
+    '$hipertension',
+    '$cancer',
+    '$enfer_cardiovascular',
+    '$renal_cro',
+    '$adulto_mayor',
+    '$niño',
+    '$fam_enfer_cron',
+    '$cant_pers',
+    '$latitud',
+    '$longitud',
+    '$prueba_rapida',
+    '$id_registrador',
+    '$id_tipo_prueba',
+    '$fecha_registro')");
+
+if ($sql->error()) {
+
+?>
+
+  <div class="alert alert-danger" role="alert">
+
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+
+    <strong>Error al insertar registro!</strong>
+
+
+
+  </div>
+
+
+
+<?php
+
+} else {
+
+
+
+?>
+
+  <div class="alert alert-success" role="alert">
+
+    <button type="button" class="close" data-dismiss="alert">&times;</button>
+
+    <strong>¡el registro de insertó correctamente!</strong>
+
+
+
+  </div>
+
+<?php
+
+
+
+}
+
+
+
+?>
+
+<?php
+
+/*
+
+      $sql->consulta("INSERT into t_articulo (titulo,imagen,resumen,id_autor,link_youtube,enlace,fecha,estado,id_categoria) 
+
+    values('$titulo','$img_articulo','$resumen','$id_autor','$link_youtube','$enlace','$fecha','$estado','$id_categoria')");
+
+
+
+       if ($sql->error()){
+
+      ?>
+
+      <div class="alert alert-danger" role="alert">
+
+            <button type="button" class="close" data-dismiss="alert">&times;</button>
+
+            <strong>Error al insertar registro!</strong>
+
+            
+
+        </div>
+
+        
+
+      <?php
+
+      }
+
+      else{
+
+      
+
+       $linea=$sql->consulta("SELECT MAX(id_articulo) from t_articulo" );
+
+       while($r = $sql->fetch_array($linea)){$respuesta=$r[0];}
+
+       echo $respuesta;
+
+
+
+      }
+
+     */
+
+?>
