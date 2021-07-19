@@ -17,7 +17,8 @@ if ($val > 0) {
 
   <?php
 } else {
-  $sql->consulta("INSERT into t_registrador (usuario,password,id_persona,estado_usuario,sa,img_user,c_barra) values('$usuario','$password','$id_persona',1,0,'avatar2.JPG','navbar-dark')");
+  $sql->consulta("INSERT into t_registrador (usuario,password,id_persona,estado_usuario,sa,img_user,c_barra) 
+  values('$usuario','$password','$id_persona',1,0,'avatar2.JPG','navbar-dark')");
 
   if ($sql->error()) {
     echo 2;

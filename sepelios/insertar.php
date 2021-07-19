@@ -630,30 +630,17 @@ include_once($raiz . 'class/nav.php');
 
 
               <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
-
                 <label for="mobile">Departamento</label>
-
                 <select class="form-control border-primary" name="id_departamento" id="id_departamento">
-
                   <option selected="" value=""> SELECCIONAR</option>
-
                   <?php
-
                   $cons = "SELECT id_departamento, nom_departamento from t_departamento";
-
                   $linea = $sql->consulta($cons);
-
                   while ($r = $sql->fetch_array($linea)) {
-
                     echo "<option value='" . $r[0] . "'>" . strtoupper($r[1]) . "</option>";
                   }
-
                   ?>
-
                 </select>
-
-
-
               </div>
 
 

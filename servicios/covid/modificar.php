@@ -68,9 +68,7 @@ $sql->consulta("UPDATE t_covid SET
     prueba_rapida = '$prueba_rapida',
     id_registrador = $id_registrador,
     id_tipo_prueba = '$id_tipo_prueba',
-    fecha_registro = '$fecha_registro'
-
-    
+    fecha_registro = '$fecha_registro'    
     where id_covid = '$id_covid'");
 if ($sql->error()) {
     $respuesta = array($sql->error());

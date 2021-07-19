@@ -1,182 +1,330 @@
-<?php
-  $raiz='../docs/';
-  $nav='../';
-  $title='Modificar Articulo';
-  include_once($raiz.'class/head.php');
-  include_once($raiz.'class/header.php');
-  include_once($raiz.'class/nav.php');
-  include_once($raiz.'class/utilitario.php');
-  $id_articulo = $_GET['id_articulo'];
-  
-  $formato=new utilitariophp();
-  $cons="SELECT aa.id_articulo, aa.titulo, aa.imagen,a.nombre as nom_autor,aa.link_youtube,aa.enlace,aa.fecha,c.descripcion, aa.resumen, aa.id_autor, aa.contenido, aa.id_categoria FROM t_articulo aa
-      inner join t_autor a on a.id_autor= aa.id_autor
-      inner join t_categoria c on c.id_categoria= aa.id_categoria where id_articulo=$id_articulo "
-
-
-
-
-  //$id_sub_modulo='25';
-  //include_once($raiz.'class/valida_permiso.php');
-  //require($raiz."class/correlativo.php");
-  //$correlativo= new correlativo();
-  //$nro_dato=$correlativo->dato_lab();
-
-?>
-        <div class="content-wrapper">
-         <div class="card" >
-            <div class="card-body">
-                <nav aria-label="breadcrumb" role="navigation">
-                      <ol class="breadcrumb breadcrumb-custom">
-                        <li class="breadcrumb-item"><a href="../index.php"><i class="fa fa-home"></i> </a></li>
-                        <li class="breadcrumb-item"><a href="index.php"><i class="fa fa-newspaper-o"></i>  Publicaciones</a></li>
-                        <li class="breadcrumb-item active" aria-current="page"><i class="fa fa-plus-circle"></i> <span>Nuevo Registro</span></li>
-                      </ol>
-                  </nav>
-                   <h4 class="card-title">Formulario Publicación</h4>
-
-              <form id="detalle"  name="detalle" enctype="multipart/form-data">
-              
-
-
-
-<?php // desDE AQUI COPIAR Y PEGAR DEL INSERTAR ?>
-
-
-
-
-                  <div class="col-md-12 col-sm-12 col-xs-12 form-group ">
-                      <div class="row"> 
-                          <?php 
-                            $linea = $sql->consulta($cons);
-                            
-                            foreach($linea as $datos): 
-                 
-               
-                    ?> 
-
-                                 <div class="col-md-6 col-sm-12 col-xs-12 form-group ">
-                                   <input type="hidden" class="form-control" id="id_articulo" name="id_articulo" value="<?=   $id_articulo ?>">
-                                    <label>Titulo</label>
-                                     <input type="text" class="form-control" id="titulo" name="titulo" value="<?php echo $datos['titulo'] ?>">
-
-
-                                  </div>     
-                
-
-                                  <div class="col-md-6 col-sm-12 col-xs-12 form-group ">
-                                    <label for="yt">Link Youtube</label>
-                                    <input type="text" class="form-control" id="link_youtube" name="link_youtube" value="<?php echo ( $datos['link_youtube'])?>">
-                                  </div>
-
-
-                                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
-                                  <label for="telefono">Enlace</label>
-                                    <input type="text" class="form-control" id="enlace" name="enlace" value="<?php echo ( $datos['enlace'])?>">
-                                  </div>
-
-                                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
-                                  <label for="telefono">Imagen Portada</label>
-                                    <input type="file" name="imagen" class="file-upload-default">
-                                      <div class="input-group col-xs-12">
-                                        <input type="text" class="form-control file-upload-info" disabled placeholder="Imagen Portada">
-                                        <div class="input-group-append">
-                                          <button class="file-upload-browse btn btn-info" type="button">Cargar</button>                          
-                                        </div>
-                                      </div>
-                                  </div>
-
-
-                                  <div class="col-md-3 col-sm-12 col-xs-12 form-group "> 
-                                   <label for="mobile">Autor</label>
-                                                      
-                                              <select class="form-control border-primary"  name="id_autor" id="id_autor" >
-                                                    <option selected=""> SELECCIONAR</option>
-
-                                                       <?php
-                                                          $cons="SELECT m.id_autor,m.nombre  FROM t_autor m order by m.id_autor asc";
-                                                            $linea = $sql->consulta($cons);
-                                                            while($r = $sql->fetch_array($linea)) {
-                                                             echo "<option value='".$r[0]."'>".strtoupper($r[1] )."</option>";  
-                                                        }
-                                                        ?>
-                                                      
-                                                  </select>
-                                   
-                                  </div>
-                                  <script >
-                                  document.getElementById("id_autor").value = "<?php echo ($datos['id_autor'])?>";
-
-                                  </script>
-
-                                <div class="col-md-3 col-sm-12 col-xs-12 form-group "> 
-                                   <label for="mobile">Categoría</label>
-                                                      
-                                              <select class="form-control border-primary"  name="id_categoria" id="id_categoria">
-                                                    <option selected=""> SELECCIONAR</option>
-
-                                                      <?php
-                                                          $cons="SELECT m.id_categoria,m.descripcion  FROM t_categoria m order by m.id_categoria asc";
-                                                            $linea = $sql->consulta($cons);
-                                                            while($r = $sql->fetch_array($linea)) {
-                                                             echo "<option value='".$r[0]."'>".strtoupper($r[1] )."</option>";  
-                                                        }
-                                                       ?>
-                                                      
-                                            </select>
-                                   
-                                  </div>
-                                   <script >
-                                  document.getElementById("id_categoria").value = "<?php echo ($datos['id_categoria'])?>";
-
-                                  </script>
-                                  <div class="col-md-12 col-sm-12 col-xs-12 form-group ">
-                                    <label>Resúmen</label>
-                                     <td > <textarea name="resumen" class="form-control"  rows="4" id="resumen" spellcheck="true" required="required" > <?= ( $datos['resumen'])?></textarea></td>
-
-
-                                  </div> 
-                                  <label>Contenido</label>
-                                  
-                                  <div class="col-md-12 col-sm-12 col-xs-12 form-group ">
-                                    <div id="summernoteExample">
-                                      <?php echo ($datos['contenido']);?>
-                                    </div>
-                                  </div>
-
-                                <?php endforeach ?>
-
-                                
-                                <br>
-
-
-                                <?php // HASTA AQUIIII  BORRAR TODO ?>
-
-
-
-                                
-                                   <div class="form-group mt-12" align="right">
-                                        <button type="submit" class="btn btn-success mr-2" id="actualizar"><i class="fa fa-save"></i> Guardar</button>
-                                        <button onclick="salir()" class="btn btn-outline-danger">Volver</button>
-                                  </div>
-                      <hr>
-                    </div>  
-              </form>    
-
-                   
-                
-            </div>
-          </div>
-
-<?php
-  include_once($raiz.'class/footer.php');
-?>   
-<script src="js/nuevo.js"></script>
-<script type="text/javascript">
-  
-    
-  function salir(){
-    window.location='index.php';
-  } 
-
-</script>      
+<?php
+
+$raiz = '../docs/';
+
+$nav = '../';
+
+$title = 'Editar triaje de caso de covid ';
+
+include($raiz . 'class/head.php');
+
+include($raiz . 'class/header.php');
+
+include_once($raiz . 'class/nav.php');
+
+include_once($raiz . 'class/utilitario.php');
+
+
+$id_dengue = $_GET['id_dengue'];
+$formato = new utilitariophp();
+
+$cons = "SELECT c.id_dengue, c.id_paciente, c.id_registrador, c.longitud, c.latitud, c.had_dengue, c.temperatura, c.mialgias, c.cefalea, c.ocular_retro_ache,
+c.lumbar_ache, c.rash, c.conjuntivitis, c.nauseas, c.abdominal_ache, c.toracico_ache, c.derrame_seroso, c.vomitos_perm, c.hipotermia, c.diuresis,c.hepatomegalia,
+c.ictericia, c.estado_mental, c.hematocrito, c.pulso_debil, c.cianoticas, c.presion_arterial, r.usuario, p.nombre, p.apellido_paterno, p.apellido_materno, p.dni,
+c.fecha_registro, reg.nombre as regnombre, reg.apellido_paterno as regpaterno, reg.apellido_materno as regmaterno
+from t_dengue c
+LEFT join t_paciente p on p.id_persona = c.id_paciente
+INNER join t_registrador r on c.id_registrador = r.id_registrador
+LEFT join t_paciente reg on reg.id_persona = r.id_persona where id_dengue=$id_dengue "
+
+?>
+
+
+
+
+
+
+<div class="content-wrapper">
+
+  <div class="card">
+
+    <div class="card-body">
+
+      <div class="wrapper d-block d-sm-flex align-items-center justify-content-between">
+
+        <nav aria-label="breadcrumb" role="navigation">
+
+          <ol class="breadcrumb breadcrumb-custom">
+
+            <li class="breadcrumb-item"><a href="../index.php"><i class="fa fa-home"></i> </a></li>
+
+            <li class="breadcrumb-item"><a href="index.php"> Formulario</a></li>
+
+            <li class="breadcrumb-item active" aria-current="page"><span> Editar Registro</span> </li>
+
+          </ol>
+
+        </nav>
+
+        <ul class="nav nav-tabs tab-solid tab-solid-primary mb-0" id="myTab" role="tablist">
+
+          <li class="nav-item">
+
+            <a class="nav-link active" id="info-tab" data-toggle="tab" href="#info" role="tab" aria-controls="I" aria-expanded="true">1. Signos y Sintomas</a>
+
+          </li>
+
+        </ul>
+
+
+
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+      <h4 class="card-title">Formulario de Triage Casos Covid</h4>
+
+      <div class="tab-content" id="myTabContent">
+
+        <div class="tab-pane fade show active" id="info" role="tabpanel" aria-labelledby="info">
+
+          <form id="detalle" name="detalle" enctype="multipart/form-data">
+
+            <input type="hidden" id='id_covid' value='<?= $id_covid ?>'>
+            <div class="col-md-12 col-sm-12 col-xs-12 form-group ">
+
+              <div class="row">
+                <div class="col-md-12 col-sm-12 col-xs-12 form-group ">
+                  <h3>Sintomas</h3>
+                </div>
+                <!--  ESTABLECIMIENTO/PACIENTE -->
+
+                <?php
+                $info = $sql->consulta($cons);
+                foreach ($info as $c) :
+
+
+                ?>
+
+
+
+
+                  <div class=" col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class=" form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" id='fiebre' <?= $c['fiebre'] == 1 ? "checked=''" : '' ?> class="form-check-input">
+                        1.- ¿Presenta fiebre ?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" id='tos' <?= $c['tos'] == 1 ? "checked=''" : '' ?> class="form-check-input">
+                        2.- ¿Presenta Tos?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" id='congestion_nasal' <?= $c['congestion_nasal'] == 1 ? "checked=''" : '' ?> class="form-check-input">
+                        3.- ¿Presenta rinorrea/congestion nasal?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" id='respiratorio' <?= $c['respiratorio'] == 1 ? "checked=''" : '' ?> class="form-check-input">
+                        4.- ¿Presenta Sibilancias?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id='dolor_garganta' <?= $c['dolor_garganta'] == 1 ? "checked=''" : '' ?>>
+                        5.- ¿Presenta dolor torácico?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id='contacto_persona' <?= $c['contacto_persona'] == 1 ? "checked=''" : '' ?>>
+                        6.- ¿Presenta Mialgias?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id='out_country' <?= $c['out_country'] == 1 ? "checked=''" : '' ?>>
+                        7.- ¿Presenta Artralgias?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id='work_ipress' <?= $c['work_ipress'] == 1 ? "checked=''" : '' ?>>
+                        8.- ¿Presenta cansancio/malestar?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id='obesidad' <?= $c['obesidad'] == 1 ? "checked=''" : '' ?>>
+                        9.- ¿Presenta deambulación?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id='diabetes' <?= $c['diabetes'] == 1 ? "checked=''" : '' ?>>
+                        10.- ¿Tiraje costal muy acentuado?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id='inmunosupresor' <?= $c['inmunosupresor'] == 1 ? "checked=''" : '' ?>>
+                        11.- ¿Presenta Cefaleas?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id='gestante' <?= $c['gestante'] == 1 ? "checked=''" : '' ?>>
+                        12.- ¿Presenta alteración de la conciencia/confusión?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id='asma' <?= $c['asma'] == 1 ? "checked=''" : '' ?>>
+                        13.- ¿Presenta convulsiones?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id='enfermedad_pulmonar_cro' <?= $c['enfermedad_pulmonar_cro'] == 1 ? "checked=''" : '' ?>>
+                        14.- ¿Presenta dolor abdominal?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id='hipertension' <?= $c['hipertension'] == 1 ? "checked=''" : '' ?>>
+                        15.- ¿Presenta vomitos/nauseas?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id='cancer' <?= $c['cancer'] == 1 ? "checked=''" : '' ?>>
+                        16.- ¿Presenta diarrea?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id='enfer_cardiovascular' <?= $c['enfer_cardiovascular'] == 1 ? "checked=''" : '' ?>>
+                        17.- ¿Presenta Conjuntivitis?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id='renal_cro' <?= $c['renal_cro'] == 1 ? "checked=''" : '' ?>>
+                        18.- ¿Presenta erupciones cutaneas?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id='adulto_mayor' <?= $c['adulto_mayor'] == 1 ? "checked=''" : '' ?>>
+                        19.- ¿Presenta ulceras cutáneas?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-3 col-sm-12 col-xs-12 form-group ">
+                    <div class="form-check form-check-flat">
+                      <label class="form-check-label">
+                        <input type="checkbox" class="form-check-input" id='prueba_rapida' <?= $c['prueba_rapida'] == 1 ? "checked=''" : '' ?>>
+                        20.- ¿Resultado de Prueba Rápida?
+                        <i class="input-helper"></i></label>
+                    </div>
+                  </div>
+                  <div class="col-md-1 col-sm-12 col-xs-12 form-group ">
+
+                    <label>Oxigenación</label>
+
+                    <input type="text" class="form-control border-primary " id="cant_pers" value='<?= $c['cant_pers'] ?>' aria-describedby="colored-addon1">
+
+                  </div>
+              </div>
+
+            <?php
+                endforeach
+            ?>
+            <div class="form-group mt-12" align="right">
+
+              <button type="submit" class="btn btn-success mr-2" id="guardar"><i class="fa fa-save"></i> Guardar</button>
+
+              <button onclick="salir()" class="btn btn-outline-danger">Volver</button>
+
+            </div>
+
+            </div>
+
+        </div>
+
+
+        </form>
+      </div>
+
+    </div>
+
+  </div>
+
+
+
+  <?php
+
+  include_once($raiz . 'class/footer.php');
+
+  ?>
+
+  <script src="js/app.js"></script>
+
+  <script type="text/javascript">
+    function salir() {
+
+      window.location = 'index.php';
+
+    }
+  </script>
+
+  <script type="text/javascript">
+
+
+
+
+
+
+
+
+
+  </script>

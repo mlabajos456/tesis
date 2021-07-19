@@ -7,6 +7,8 @@ $sql = new sentencias();
 
 $id_paciente = ($_POST['id_paciente']);
 $fiebre = ($_POST['fiebre']);
+echo 'estopy aqui';
+echo $fiebre;
 $tos = ($_POST['tos']);
 $dolor_garganta = ($_POST['dolor_garganta']);
 $respiratorio = ($_POST['respiratorio']);
@@ -30,8 +32,8 @@ $adulto_mayor = ($_POST['adulto_mayor']);
 $niño = ($_POST['niño']);
 $fam_enfer_cron = ($_POST['fam_enfer_cron']);
 $cant_pers = ($_POST['cant_pers']);
-$latitud = ($_POST['latitud']);
-$longitud = ($_POST['longitud']);
+//$latitud = ($_POST['latitud']);
+//$longitud = ($_POST['longitud']);
 $prueba_rapida = ($_POST['prueba_rapida']);
 $id_registrador = ($_POST['id_registrador']);
 $id_tipo_prueba = ($_POST['id_tipo_prueba']);
@@ -95,8 +97,8 @@ $sql->consulta("INSERT into t_covid (
     '$niño',
     '$fam_enfer_cron',
     '$cant_pers',
-    '$latitud',
-    '$longitud',
+    '-6.0435061',
+    '-76.9723102',
     '$prueba_rapida',
     '$id_registrador',
     '$id_tipo_prueba',

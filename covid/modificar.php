@@ -72,14 +72,6 @@ INNER join t_tipo_prueba tp on tp.id_tipo_prueba = c.id_tipo_prueba where id_cov
 
       <form id="detalle" name="detalle" enctype="multipart/form-data">
 
-
-
-
-
-
-
-
-
         <?php // desDE AQUI COPIAR Y PEGAR DEL INSERTAR 
         ?>
 

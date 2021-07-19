@@ -18,11 +18,16 @@ $formato = new utilitariophp();
 
 
 
-$cons = "SELECT c.id_covid, c.id_paciente, c.id_registrador, c.id_tipo_prueba, c.prueba_rapida,c.longitud, c.latitud, r.usuario, p.nombre, p.apellido_paterno, p.apellido_materno, p.dni, tp.descripcion, c.fecha_registro
+$cons = "SELECT c.id_covid, c.id_paciente, c.fiebre, c.tos, c.dolor_garganta, c.respiratorio, c.congestion_nasal,
+c.contacto_persona, c.out_country, c.work_ipress,  c.obesidad, c.diabetes, c.inmunosupresor, c.gestante, c.asma, c.enfermedad_pulmonar_cro,
+c.hipertension, c.cancer, c.enfer_cardiovascular, c.renal_cro, c.adulto_mayor, c.nino, c.cant_pers, c.fam_enfer_cron,
+c.id_registrador, c.id_tipo_prueba, c.prueba_rapida,c.longitud, c.latitud, r.usuario, p.nombre,
+p.apellido_paterno, p.apellido_materno, p.dni, tp.descripcion, c.fecha_registro, reg.nombre as regnombre, reg.apellido_paterno as regpaterno
 
 from t_covid c
 INNER JOIN t_paciente p on p.id_persona = c.id_paciente
 INNER join t_registrador r on c.id_registrador = r.id_registrador
+LEFT join t_paciente reg on reg.id_persona = r.id_persona
 INNER join t_tipo_prueba tp on tp.id_tipo_prueba = c.id_tipo_prueba";
 
 
@@ -83,9 +88,8 @@ $val = $sql->numRegistros($cons);
           $linea = $sql->consulta($cons);
           foreach ($linea as $r) {
             $prueba_rapida = '';
-            $r['prueba_rapida'] == 0 ? $prueba_rapida = 'POSITIVO' : $prueba_rapida = 'FALSO';
+            $r['prueba_rapida'] == 1 ? $prueba_rapida = 'POSITIVO' : $prueba_rapida = 'FALSO';
             $fecha = $r['fecha_registro'];
-
             $date = new DateTime($fecha);
 
           ?>
@@ -104,7 +108,7 @@ $val = $sql->numRegistros($cons);
 
               <td>
 
-                <a href="modificar.php?id_articulo=<?php echo $r['id_covid'] ?>"> <button type="button" name="editar" id="editar" class="btn btn-outline-warning" onclick="change_pic('<?= $r["imagen"] ?>')">
+                <a href="insertar.php?id_covid=<?php echo $r['id_covid'] ?>"> <button type="button" name="editar" id="editar" class="btn btn-outline-warning">
 
                     <i class="fa fa-edit"></i>
 
