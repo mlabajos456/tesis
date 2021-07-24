@@ -1,7 +1,7 @@
 <?php
 $raiz = '../docs/';
 $nav = '../';
-$title = 'Autor';
+$title = 'Pacientes';
 include_once($raiz . 'class/head.php');
 include_once($raiz . 'class/header.php');
 include_once($raiz . 'class/nav.php');

@@ -21,11 +21,11 @@
 
         <a class="navbar-brand brand-logo" href="<?php echo $raiz; ?>../index.php">
 
-          <img src="<?php echo $raiz; ?>images/icono.png" alt="logo" /></a>
+          <img src="<?php echo $raiz; ?>images/logoGoreHori.png" alt="logo" /></a>
 
         <a class="navbar-brand brand-logo-mini" href="<?php echo $raiz; ?>../index.php">
 
-          <img src="<?php echo $raiz; ?>images/icono.png" alt="logo" /></a>
+          <img src="<?php echo $raiz; ?>images/logoGoreHori.png" alt="logo" /></a>
 
       </div>
 

@@ -75,22 +75,32 @@ include_once($raiz . 'class/nav.php');
                   </div>
 
                    -->
-
-      <div class='col-xl-12' align="text-right">
-
-        <h3 class='text-right'>
+      <form id="detalle" name="detalle" enctype="multipart/form-data">
+        <div class="row">
 
 
+          <div class="col-md-3 col-sm-6 col-xs-6 form-group ">
+            <input type="date" class="form-control border-primary" id="inicio" name="inicio">
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6 form-group ">
+            <input type="date" class="form-control border-primary" id="final" name="final">
+          </div>
+          <div class="col-md-3">
+            <button type="button" onclick="renewMap();" style="height: 39px;" id="nuevo" name="nuevo" class="btn btn-outline-primary"><i class="fa fa-flag"></i> Rango de fechas</button>
+          </div>
 
-          <a title="Nuevo registro" href="insertar.php"><button type="button" id="nuevo" name="nuevo" class="btn btn-outline-primary"><i class="fa fa-plus-circle"></i> Nuevo</button></a>
+          <div class='col-md-3' align="text-right" float="right">
+            <h3 class='text-right'>
+              <a title="Reporte I1 y I2" href="../reportes/covid_report.php" target="_blank"><button type="button" id="nuevo" name="nuevo" class="btn btn-outline-primary"><i class="fa fa-flag"></i> Reporte I1 y I2</button></a>
+            </h3>
 
-        </h3>
+          </div>
+        </div>
+      </form>
+
+      <div class="datos_ajax_register leyenda">
 
       </div>
-
-
-
-      <div class="datos_ajax_register"></div>
 
       <div class="outer_div" id='map' style="height: 500px;
 	width: 100%;">
@@ -111,13 +121,14 @@ include_once($raiz . 'class/nav.php');
   ?>
 
   <script src="js/app.js"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap&v=weekly"></script>
 
 
   <script>
     /* $(document).ready(function() {
-
+?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&
       load(1);
 
     }); */

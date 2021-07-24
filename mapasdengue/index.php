@@ -75,24 +75,34 @@ include_once($raiz . 'class/nav.php');
                   </div>
 
                    -->
+      <form id="detalle" name="detalle" enctype="multipart/form-data">
+        <div class="row">
+          <div class="col-md-3 col-sm-6 col-xs-6 form-group ">
+            <input type="date" class="form-control border-primary" id="inicio" name="inicio">
+          </div>
+          <div class="col-md-3 col-sm-6 col-xs-6 form-group ">
+            <input type="date" class="form-control border-primary" id="final" name="final">
+          </div>
+          <div class="col-md-3">
+            <button type="button" onclick="renewMap();" style="height: 39px;" id="nuevo" name="nuevo" class="btn btn-outline-primary"><i class="fa fa-flag"></i> Rango de fechas</button>
+          </div>
 
-      <div class='col-xl-12' align="text-right">
+          <div class='col-md-3' align="text-right" float="right">
+            <h3 class='text-right'>
+              <a title="Reporte I1 y I2" href="../reportes/dengue_report.php" style="height:39px" target="_blank"><button type="button" id="nuevo" name="nuevo" class="btn btn-outline-primary"><i class="fa fa-flag"></i> Reporte I1 y I2</button></a>
+            </h3>
 
-        <h3 class='text-right'>
+          </div>
+        </div>
+      </form>
 
 
 
-          <a title="Nuevo registro" href="insertar.php"><button type="button" id="nuevo" name="nuevo" class="btn btn-outline-primary"><i class="fa fa-plus-circle"></i> Nuevo</button></a>
-
-        </h3>
-
+      <div class="datos_ajax_register leyenda">
+          <h1>Total de casos: </h1>
       </div>
 
-
-
-      <div class="datos_ajax_register"></div>
-
-      <div class="outer_div" id='map2' style="height: 500px;
+      <div class="outer_div" id='map2' style="height: 860px;
 	width: 100%;">
 
 
@@ -112,13 +122,14 @@ include_once($raiz . 'class/nav.php');
 
   <script src="js/app.js"></script>
 
-  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAZeK6G7Eprv_kZtFHyrbmFpAWJYQWUX08&callback=iniciarMap2"></script>
+  <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script>
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBDaeWicvigtP9xPv919E-RNoxfvC-Hqik&callback=iniciarMap2&v=weekly"></script>
 
 
   <script>
-    /* $(document).ready(function() {
+     $(document).ready(function() {
 
-      load(1);
+    //  load(1);
 
-    }); */
+    }); 
   </script>

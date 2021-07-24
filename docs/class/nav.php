@@ -49,20 +49,28 @@
                           <div id="submenu-3" class="collapse " style="">
 
                                 <ul class="nav flex-column sub-menu">
+                                      <?php
+                                          if ($_SESSION['sa'] == 1) {
 
+                                          ?>
 
-                                      <li class="nav-item">
-                                            <a class="nav-link" href="<?php echo $nav; ?>ugipress">Ugipress</a>
-                                      </li>
-                                      <li class="nav-item">
-                                            <a class="nav-link" href="<?php echo $nav; ?>red">Red</a>
-                                      </li>
-                                      <li class="nav-item">
-                                            <a class="nav-link" href="<?php echo $nav; ?>microred">Micro Red</a>
-                                      </li>
-                                      <li class="nav-item  ">
-                                            <a class="nav-link" href="<?php echo $nav; ?>establecimientos">Establecimientos</a>
-                                      </li>
+                                            <li class="nav-item">
+                                                  <a class="nav-link" href="<?php echo $nav; ?>ugipress">Ugipress</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                  <a class="nav-link" href="<?php echo $nav; ?>red">Red</a>
+                                            </li>
+                                            <li class="nav-item">
+                                                  <a class="nav-link" href="<?php echo $nav; ?>microred">Micro Red</a>
+                                            </li>
+                                            <li class="nav-item  ">
+                                                  <a class="nav-link" href="<?php echo $nav; ?>establecimientos">Establecimientos</a>
+                                            </li>
+
+                                      <?php
+                                          }
+
+                                          ?>
                                       <li class="nav-item  ">
                                             <a class="nav-link" href="<?php echo $nav; ?>pacientes">Pacientes</a>
                                       </li>
@@ -128,18 +136,24 @@
                                 </ul>
                           </div>
                     </li>
-                    <li class="nav-item ">
+                    <?php
+                        if ($_SESSION['sa'] == 1) {
 
-                          <a class="nav-link" href="#submenu-4" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fa fa-tags menu-icon"></i> <span class="menu-title">&nbsp;&nbsp;Administrar Usuario</span> </a>
-                          <div id="submenu-4" class="collapse " style="">
-                                <ul class="nav flex-column sub-menu">
-                                      <li class="nav-item">
-                                            <a class="nav-link" href="<?php echo $nav; ?>usuario">Usuarios</a>
-                                      </li>
-                                </ul>
-                          </div>
-                    </li>
+                        ?>
+                          <li class="nav-item ">
 
+                                <a class="nav-link" href="#submenu-4" data-toggle="collapse" aria-expanded="false" data-target="#submenu-4" aria-controls="submenu-4"><i class="fa fa-tags menu-icon"></i> <span class="menu-title">&nbsp;&nbsp;Administrar Usuario</span> </a>
+                                <div id="submenu-4" class="collapse " style="">
+                                      <ul class="nav flex-column sub-menu">
+                                            <li class="nav-item">
+                                                  <a class="nav-link" href="<?php echo $nav; ?>usuario">Usuarios</a>
+                                            </li>
+                                      </ul>
+                                </div>
+                          </li>
+                    <?php
+                        }
+                        ?>
 
 
 

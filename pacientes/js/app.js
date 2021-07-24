@@ -46,29 +46,37 @@ $("#guardarDatos").submit(function (event) {
 $("#dataUpdate").on("show.bs.modal", function (event) {
   var button = $(event.relatedTarget);
 
-  var id_autor = button.data("id_autor");
+  var id_persona = button.data("id_persona");
   var nombre = button.data("nombre");
   var dni = button.data("dni");
-  var descripcion = button.data("descripcion");
-  var frase = button.data("frase");
-  var facebook = button.data("facebook");
-  var twitter = button.data("twitter");
-
+  var sexo = button.data("sexo");
+  var fecha_nac = button.data("fecha_nac");
+  var estado_civil = button.data("estado_civil");
+  var apellido_paterno = button.data("apellido_paterno");
+  var apellido_materno = button.data("apellido_materno"); 
+  var domicilio = button.data("domicilio"); 
+  var telefono = button.data("telefono"); 
   var modal = $(this);
   $("#actualidarDatos")[0].reset();
 
-  modal.find(".modal-body #id_autor").val(id_autor);
+  modal.find(".modal-body #id_persona").val(id_persona);
   modal.find(".modal-body #nombre").val(nombre);
   modal.find(".modal-body #dni").val(dni);
-  modal.find(".modal-body #descripcion").val(descripcion);
-  modal.find(".modal-body #frase").val(frase);
-  modal.find(".modal-body #facebook").val(facebook);
-  modal.find(".modal-body #twitter").val(twitter);
+  modal.find(".modal-body #apellido_paterno").val(apellido_paterno);
+  modal.find(".modal-body #apellido_materno").val(apellido_materno);
+  modal.find(".modal-body #fecha_nac").val(fecha_nac);
+  modal.find(".modal-body #sexo").val(sexo);
+  modal.find(".modal-body #estado_civil").val(estado_civil);
+  modal.find(".modal-body #apellido_materno").val(apellido_materno);
+  modal.find(".modal-body #telefono").val(telefono);
+  modal.find(".modal-body #domicilio").val(domicilio);
 });
 
 //Modificar los datos recientemente jalados
 $("#actualidarDatos").submit(function (event) {
   var parametros = $(this).serialize();
+  console.log("aqui id persona");
+  console.log(parametros.id_persona);
   $.ajax({
     type: "POST",
     url: "modelos/modificar.php",
@@ -80,11 +88,16 @@ $("#actualidarDatos").submit(function (event) {
       $(".datos_ajax_register").html("Mensaje: Cargando...");
     },
     success: function (datos) {
-      $(".datos_ajax_register").html(datos);
-      $("#dataUpdate").modal("hide");
-      $(".modal-backdrop").hide();
-
-      load(1);
+      if(datos ==0){
+        showToastPosition('top-right', 'Duplicidad!', 'Ya existe un paciente con ese dni', 'warning');
+      }else{
+        $(".datos_ajax_register").html(datos);
+        $("#dataUpdate").modal("hide");
+        $(".modal-backdrop").hide();
+  
+        load(1);
+      }
+   
     },
   });
 

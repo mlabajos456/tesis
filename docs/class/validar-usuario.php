@@ -34,7 +34,7 @@ $a_actual = date("Y");
 
 
 $result = $sql->fetch_array($sql->consulta("SELECT usuario, password, id_registrador ,c_barra, t.nombre as nombre, 
-	t.apellido_paterno as apellidos,img_user, t.apellido_materno as materno FROM t_registrador r
+	t.apellido_paterno as apellidos,img_user, t.apellido_materno as materno, sa FROM t_registrador r
 	inner join t_paciente t on t.id_persona = r.id_persona
 	WHERE usuario = '$nick' AND estado_usuario ='1' AND password = '$pass' "));
 
@@ -52,6 +52,7 @@ if ($result[0] == $nick && ($result[1]) == $pass) {
 	$_SESSION['nombre'] = $result['nombre'];
 
 	$_SESSION['apellidos'] = $result['nombre'] . ' ' . $result['apellidos'];
+	$_SESSION['sa'] = $result['sa'];
 
 	$_SESSION['nav'] = "sidebar-dark"; //sidebar-icon-only
 

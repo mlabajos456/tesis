@@ -4,7 +4,7 @@ require($raiz . "class/sentencias.php");
 $sql = new sentencias();
 
 $cons = ("SELECT latitud, longitud
-from t_covid c ");
+from t_covid c LIMIT 1 ");
 $resultado = array();
 $linea = $sql->consulta($cons);
 foreach ($linea as $datos) :

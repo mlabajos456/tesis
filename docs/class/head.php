@@ -8,7 +8,9 @@
 
   if(!isset($_SESSION['nickname'])){
     header("Location:".$raiz."../login.php");
+    
  }
+ 
   $usuario = $sql->fetch_array($sql->consulta("SELECT * from t_registrador inner join t_paciente  WHERE usuario = '".$_SESSION['nickname']."'"));
   //$usuario = pg_fetch_array($sql->consulta("SELECT * from t_usuario WHERE nom_usuario = '".$_SESSION['nickname']."'"));
 ?>
@@ -21,7 +23,7 @@
   <!-- Required meta tags -->
   
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-  <title>Defunciones | <?= $title ?></title>
+  <title>Triaje | <?= $title ?></title>
   <!-- plugins:css -->
   <link rel="stylesheet" href="<?php echo $raiz;?>vendors/mdi/css/materialdesignicons.min.css">
   <link rel="stylesheet" href="<?php echo $raiz;?>vendors/simple-line-icons/css/simple-line-icons.css">

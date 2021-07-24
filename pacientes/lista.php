@@ -3,8 +3,8 @@ $raiz = '../docs/';
 include_once($raiz . 'class/head.php');
 include_once($raiz . 'class/utilitario.php');
 $formato = new utilitariophp();
-$cons = "SELECT m.id_persona,m.nombre,m.apellido_paterno,m.apellido_materno,m.dni, m.fecha_nac, m.estado_civil, m.sexo from t_paciente m
-     order by m.id_persona";
+$cons = "SELECT m.id_persona,m.nombre,m.apellido_paterno,m.apellido_materno,m.dni, m.fecha_nac, m.estado_civil,m.domicilio, m.sexo,m.telefono from t_paciente m
+     order by m.id_persona desc";
 $val = $sql->numRegistros($cons);
 ?>
 <!--notificaciones-->
@@ -43,13 +43,13 @@ $val = $sql->numRegistros($cons);
           while ($r = $sql->fetch_array($linea)) {
             $sexo = $r['sexo'] == 1 ? 'Hombre' : 'Mujer';
             $estado_civil = '';
-            if ($r['estado_civil'] == 0) {
+            if ($r['estado_civil'] == 1) {
               $estado_civil = 'Soltero';
             } else if (
-              $r['estado_civil'] == 1
+              $r['estado_civil'] == 2
             ) {
               $estado_civil = 'Casado';
-            } else if ($r['estado_civil'] == 2) {
+            } else if ($r['estado_civil'] == 4) {
               $estado_civil = 'Divorciado';
             } else if ($r['estado_civil'] == 3) {
               $estado_civil = 'Viudo';
@@ -68,12 +68,20 @@ $val = $sql->numRegistros($cons);
               <td><?= ($estado_civil) ?></td>
               <td><?= ($sexo) ?></td>
               <td>
-                <button title="Editar" type="button" class="btn btn-warning" onclick="change_pic('<?= $r["imagen"] ?>')" data-toggle="modal" data-target="#dataUpdate" data-id_autor="<?php echo $r['id_autor'] ?>" data-imagen="<?php echo $r['imagen'] ?>" data-nombre="<?php echo $r['nombre'] ?>" data-dni="<?php echo $r['dni'] ?>" data-descripcion="<?php echo $r['apellido_paterno'] ?>" data-frase="<?php echo $r['apellido_materno'] ?>" data-facebook="<?php echo $r['fecha_nacimiento'] ?>" data-twitter="<?php echo $r['telefono'] ?>">
+                <button title="Editar" type="button" class="btn btn-warning" data-toggle="modal" 
+                data-target="#dataUpdate" data-id_persona="<?php echo $r['id_persona'] ?>"
+                 data-nombre="<?php echo $r['nombre'] ?>" data-dni="<?php echo $r['dni'] ?>" 
+                 data-apellido_paterno="<?php echo $r['apellido_paterno'] ?>" data-apellido_materno="<?php echo $r['apellido_materno'] ?>"
+                 data-fecha_nac="<?php echo $r['fecha_nac'] ?>" data-telefono="<?php echo $r['telefono'] ?>"
+                 data-estado_civil="<?php echo $r['estado_civil'] ?>"
+                 data-sexo="<?php echo $r['sexo'] ?>"
+                 data-domicilio="<?php echo $r['domicilio'] ?>"
+                 >
                   <i class="fa fa-edit"></i>
                 </button>
-                <button type="button" class="btn btn-outline-danger" onclick="showSwal('swalEliminar','<?php echo $r[0] ?>')">
+                <!--   <button type="button" class="btn btn-outline-danger" onclick="showSwal('swalEliminar','<?php echo $r[0] ?>')">
                   <i class="fa fa-trash"></i>
-                </button>
+                </button>  -->
               </td>
             </tr>
           <?php
